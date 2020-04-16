@@ -1,5 +1,5 @@
 /************************************************* 
- * spaces.c	Revision 0.02
+ * spaces.c	Revision 0.03
  * ~~~~~~~~
  * Add a space after each character in a string.
  *
@@ -22,6 +22,11 @@ void spaces()
 	int i = 0;
 	while (str[i] != '\0')
 	{
+		if (str[i] == ' ')
+		{
+			++i;
+			continue;
+		}
 		printf("%c ", str[i++]);
 	}
 }
